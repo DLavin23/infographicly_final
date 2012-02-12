@@ -1,0 +1,66 @@
+<body>
+  <div class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="#">
+        <strong>InfoGraphic.ly</strong>
+      </a>
+        <div class="nav-collapse"></div>
+          <ul class="nav">
+            <li class="active">
+              <a href="#">How it works</a>
+            </li>
+            </ul>
+            <p class="navbar-text pull-right">
+              <a class="btn" href="/users/logout"> Logout</a>
+            </p>
+          </ul>    
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+<h1>Listing articles</h1>
+<br>
+<br>
+<br>
+<h2>Your reading progress...</h2>
+<div class="progress progress-info
+     progress-striped">
+  <div class="bar"
+       style="width: 23%;"></div>
+</div>
+
+<p>Total: <%= @stats["count_list"] %></p>
+<p># Read: <%= @stats["count_read"] %></p>
+<p># Unread: <%= @stats["count_unread"] %></p>
+
+<p>Genre: 
+<ul><% Genre.all.each do |genre| %>
+		<li><%= genre.name %>: 
+			<% all_articles_for_genre = genre.sources.first.articles %>
+			<% articles_for_this_user = all_articles_for_genre.find_all_by_user_id @user.id %>
+			<%= articles_for_this_user.count %></li>
+	<% end %>
+</ul></p>
+
+<ol>
+<% @articles.each do |article| %>
+	<li>Title: <%= link_to article.title, article.url %> --- Genre: <%= article.source.genre.name %> -- Shortlink: <%= article.shortlink %>
+		Status: <% if article.state == "1" %>
+					Read
+				<% else %>
+					Unread
+				<% end %>
+				 -- Time: <%= Time.at(article.time_added).strftime("%B %d, %Y %I:%M%p") %>
+				</li>
+<% end %>
+</ol>
