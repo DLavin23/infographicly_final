@@ -1,0 +1,23 @@
+<div class="span9 hero-body">
+  <div class="hero-unit">
+    <h2>Sign In Using Your Read It Later Account</h2>
+    <br>
+    <%= form_tag "/sessions" do %>
+    <div class="well form-search">
+      <%= label_tag :user_name %> <%= text_field_tag :user_name, params[:user_name] %>
+    </div>
+    <div class="well form-search">
+      <%= label_tag :password %> <%= password_field_tag :password, params[:password] %>
+    </div>
+      <%= submit_tag "Sign In" %>
+      <% end %>
+    <div class="btn group">
+      <a class="btn btn-primary btn-large" href="#">Back to New User</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+  

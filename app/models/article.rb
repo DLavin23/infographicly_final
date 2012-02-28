@@ -6,6 +6,11 @@ class Article < ActiveRecord::Base
   
   validates :item_num, :uniqueness => true
   
+  def upcase_title
+    self.title.upcase
+  end
+  
+  
   def self.parse_json(list, userid)
     list.each do |article|
       new_article = Article.new
@@ -21,7 +26,18 @@ class Article < ActiveRecord::Base
     end
   end
   
-  def self.match_source(shortlink)
+  # def self.match_source(shortlink)
+  #   Source.all.each do |source|
+  #     if source.name == shortlink
+  #       return source.id
+  #     else
+  #     end
+  #   end
+  #   return 6
+  # end
+  
+  def match_source
+    shortlink = self.shortlink
     Source.all.each do |source|
       if source.name == shortlink
         return source.id
@@ -38,3 +54,7 @@ class Article < ActiveRecord::Base
     end
   end
 end
+
+
+
+

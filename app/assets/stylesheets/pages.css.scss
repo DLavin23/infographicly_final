@@ -1,0 +1,40 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.navbar-inner{
+	padding-top:40px;
+	background: rgb(98,125,77); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(98,125,77,1)), color-stop(100%,rgba(31,59,8,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(98,125,77,1) 0%,rgba(31,59,8,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(98,125,77,1) 0%,rgba(31,59,8,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(98,125,77,1) 0%,rgba(31,59,8,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(98,125,77,1) 0%,rgba(31,59,8,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#627d4d', endColorstr='#1f3b08',GradientType=0 ); /* IE6-9 */
+}
+
+.side-bar{
+	padding:50px 0px 0px 0px;
+}
+
+.navbar.brand{
+	font-size:30px;
+}
+
+
+.hero-body{
+	padding:50px 0px 0px 0px;
+}
+
+.btn-primary{
+	background: rgb(98,125,77); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(98,125,77,1)), color-stop(100%,rgba(31,59,8,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(98,125,77,1) 0%,rgba(31,59,8,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(98,125,77,1) 0%,rgba(31,59,8,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(98,125,77,1) 0%,rgba(31,59,8,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(98,125,77,1) 0%,rgba(31,59,8,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#627d4d', endColorstr='#1f3b08',GradientType=0 ); /* IE6-9 */
+}

@@ -1,24 +1,25 @@
-<div class="container">
-  <div class="container">
-      <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit">
-        <%= form_tag login_url, :method => 'get' do %>
-         <h1>InfoGraphic.ly</h1>
-         <br>
-         <p>A beautifully simple way to organize articles you want to read</p>
-         <br>
-        <p>
-          <div class="well form-search">
-            <%= label_tag :user_name %>: <%= text_field_tag :user_name, params[:user_name] %>
-          </div>
-          <div class="well form-search">
-            <%= label_tag :password %>: <%= password_field_tag :password, params[:password] %>
-          </div>
-            <%= submit_tag "Log in" %> As a Returning User  
-        </p>
-            <% end %>
-        <p><%= link_to 'Back To New User', new_user_url %></p>
+<div class="span9 hero-body">
+  <div class="hero-unit">
+    <%= form_tag login_url, :method => 'get' do %>
+    <h1>InfoGraphic.ly</h1>
+    <br>
+    <p>A beautifully simple content aggregator that uses data visualization to help you make sense of the information you consume.
+    </p>
+    <br>
+    <p>
+      <div class="well form-search">
+        <%= label_tag :user_name %>: <%= text_field_tag :user_name, params[:user_name] %>
       </div>
+        <div class="well form-search">
+          <%= label_tag :password %>: <%= password_field_tag :password, params[:password] %>
+        </div>
+          <%= submit_tag "Log in" %> As a Returning User  
+    </p>
+          <% end %>
+    <div class="btn-group">
+      <a class="btn btn-primary btn-large" href="/users/new">Back to New User</a>
     </div>
   </div>
-  
+</div>
+      
+    
